@@ -1,5 +1,6 @@
 <template>
     <h1 style="text-align: center">Login</h1>
+    <GoogleLogin />
     <div class="login">
         <form @submit.prevent="Login">
             <label for="email">Email</label><br />
@@ -32,7 +33,10 @@
 <script>
 // import { ref } from "vue";
 import firebase from "firebase/app";
+import GoogleLogin from "../components/GoogleLogin.vue";
+
 export default {
+    components: { GoogleLogin },
     data() {
         return {
             email: "",
